@@ -1,0 +1,22 @@
+
+*{
+    background-color: rgb(199, 107, 215);
+    color: black;
+   
+}
+
+mat-card,mat-list,mat-list-item{
+    background-color: burlywood;
+    border-radius: 50px;
+    margin: auto;
+}
+
+.back{
+    background-color: cornsilk;
+    padding: 20px ;
+
+}
+
+
+
+

@@ -1,0 +1,83 @@
+<mat-card>
+    <h1>Add New Product</h1>
+    <!-- {{product | json}} -->
+    <mat-card-content>
+        
+        <div class="bootstrap-wrapper">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form (ngSubmit)="addProductFormSubmit()">
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Product Name</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="product.productName"
+                            autofocus 
+                            type="text" 
+                            name="productName" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Product Description</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="product.productDescription"
+                            autofocus 
+                            type="text" 
+                            name="productDescription" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Product Price</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="product.productprice"
+                            autofocus 
+                            type="number" 
+                            name="productprice" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Product Stock</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="product.productStock"
+                            autofocus 
+                            type="number" 
+                            name="productStock" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Product Image (URL)</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="product.productImg"
+                            autofocus 
+                            type="text" 
+                            name="productImg" 
+                            matInput 
+                            placeholder="Enter here url of the image">
+                        </mat-form-field>
+
+                        
+                        
+                         <div class="container text-center margin-t10">
+                            <button type="submit" mat-raised-button color="primary"> ADD</button>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </mat-card-content>
+</mat-card>
+

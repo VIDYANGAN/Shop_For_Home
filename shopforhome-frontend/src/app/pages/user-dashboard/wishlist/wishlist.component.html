@@ -1,0 +1,50 @@
+
+
+<div class="bootstrap-wrapper bgcol">
+    <div class="container">
+        <div >
+            <div class="col-md-6 offset-md-3 text-center" >
+        <h2 style="font-size: 25px;">Wishlist !!</h2>
+        </div>
+    </div>
+    </div>
+</div>
+
+<mat-card style="margin:5px ;background-color: rgb(216, 91, 214);">
+    <mat-list>  
+        <!-- <mat-list-item *ngFor="let c of categories "> -->
+            <tr>
+                <th>Sr.no </th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <th>Product Image</th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <th>Product Name</th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <th>Product Price</th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+              </tr>
+    </mat-list>
+</mat-card>
+
+<mat-card *ngFor="let c of wishlist " style="margin: 10px;background-color: rgb(225, 199, 228);">
+    <mat-list >
+        
+        <mat-list-item  style="height: 100%;">
+        <!-- <mat-list-item> -->
+           <table >
+            <tr >
+                <th>1</th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <th ><img src="../../../assets/bed.jpg" alt="" width="100" height="100"></th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <th style="max-width: 570px;width: 570px;overflow-wrap: break-word; height: 100%;text-align: left;" >{{c.productName}}</th>
+                <th style="width: 120px;">Rs. {{c.productprice}}</th>
+                <!-- <th style="width: 250px;"> <input type="number" name="" id="" style="width: 50px; height:40px;" value="1" min="1"></th> -->
+                <th style="width: 250px;"><button mat-flat-button color="warn" style="width:200px ;max-width:200px">Add to Cart</button></th>
+                <th style="width: 250px;"><button mat-flat-button color="basic" style="width:200px ;max-width:200px">Remove from Wishlist</button></th>
+            </tr>
+           </table>
+           
+        </mat-list-item>
+       
+    </mat-list>
+
+    
+</mat-card>
+
+

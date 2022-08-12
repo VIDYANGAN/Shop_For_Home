@@ -1,0 +1,18 @@
+
+<mat-card>
+    <h1>All Sales</h1>
+    <mat-list>
+        
+        <mat-list-item *ngFor="let c of sales">
+            <mat-icon mat-list-icon>attach_money</mat-icon>
+            <div mat-line>SalesId: <b>{{c.salesId}}</b></div>
+            <div class="margin-l30">Total Quantity {{c.quantity}}</div>
+            <div mat-line>Time: {{c.create_time}}</div>
+           
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+
+    
+</mat-card>
+

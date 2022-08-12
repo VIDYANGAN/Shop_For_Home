@@ -1,0 +1,40 @@
+<mat-card *ngIf="user">
+    <h2>Your Profile Details</h2>
+    <!-- {{user | json}} -->
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+
+                <div class="container text-center">
+                    <img class="profile-img" src="../../../assets/profile.png">
+
+                <h1 class="margin-t20">{{user.userName}}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+
+                        <!-- Tables Details -->
+                        <table class="table text-center">
+                            <tr>
+                                <td><h2>User-ID:</h2></td>
+                                <td><h2>{{user.userId}}</h2></td>
+                            </tr>
+                            <tr>
+                                <td><h2>Email:</h2></td>
+                                <td><h2>{{user.email}}</h2></td>
+                            </tr>
+                            <tr>
+                                <td><h2>Phone Number:</h2></td>
+                                <td><h2>{{user.phone}}</h2></td>
+                            </tr>
+                            <tr>
+                                <td><h2>User-Role:</h2></td>
+                                <td><h2>{{user.userRole}}</h2></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

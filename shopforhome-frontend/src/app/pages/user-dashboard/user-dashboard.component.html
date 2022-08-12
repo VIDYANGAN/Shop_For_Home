@@ -1,0 +1,56 @@
+<mat-toolbar class="header" id="top">
+
+  <button
+  *ngIf="loginF.isLoggedIn()"
+  mat-icon-button 
+  routerLink="/user/profile"
+  class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+  style="margin-right: 15px">
+  <mat-icon color="warn">account_circle</mat-icon>Profile
+  </button>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button
+  *ngIf="loginF.isLoggedIn()"
+  mat-icon-button 
+  routerLink="/user/all"
+  class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+  style="margin-right: 15px">
+  <mat-icon color="warn">category</mat-icon>All Product
+  </button>
+
+    <span class="example-spacer"></span>
+    <button
+  *ngIf="loginF.isLoggedIn()"
+ 
+  mat-icon-button 
+  routerLink="/user/wishlist"
+  class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+  style="margin-right: 15px">
+  <mat-icon color="warn">favorite</mat-icon>
+  </button>
+
+  <button
+  *ngIf="loginF.isLoggedIn()"
+  
+  mat-icon-button 
+  routerLink="/user/cart"
+  class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+  style="margin-right: 15px;">
+  <mat-icon color="warn">shopping_cart</mat-icon>
+  </button>
+  
+  </mat-toolbar>
+
+  <!-- <p>user-dashboard works!</p> -->
+<div class="bootstrap-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- <h1>Content</h1> -->
+        <router-outlet></router-outlet>
+      </div>
+      
+    </div>
+  </div>
+</div>
+

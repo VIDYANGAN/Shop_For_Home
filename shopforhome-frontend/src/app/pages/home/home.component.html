@@ -1,0 +1,93 @@
+<!-- <div class="bootstrap-wrapper bgcol">
+    <div class="container">
+        <div >
+            <div class="col-md-6 offset-md-3 text-center ">
+        <h2 >Welcome to ShopForHome App</h2>
+        </div>
+    </div>
+    </div>
+</div> -->
+
+<!-- Navigation bar -->
+<div>
+  <div style="margin-top: 0px;">
+    <mat-toolbar color="primary" class="navigation">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        
+        <a 
+        [routerLink]="'/product/all'"
+        mat-icon-button class="example-icon favorite-icon" a
+        ria-label="Example icon-button with heart icon"
+        style="margin-left:15px;margin-right:10px">
+          All Products
+        </a>
+
+      </mat-toolbar>
+  </div>
+</div>
+
+
+
+
+
+<!-- Animations with background image -->
+<div class="background-img">
+  <svg viewBox="0 0 960 300" >
+    <symbol id="s-text" >
+      <text text-anchor="middle" x="50%" y="80%" style="text-align:center">Shop For Home </text>
+      
+    </symbol>
+  
+    <g class = "g-ants">
+      <use xlink:href="#s-text" class="text-copy"></use>
+      <use xlink:href="#s-text" class="text-copy"></use>
+      <use xlink:href="#s-text" class="text-copy"></use>
+      <use xlink:href="#s-text" class="text-copy"></use>
+      <use xlink:href="#s-text" class="text-copy"></use>
+    </g>
+  </svg>
+</div>
+
+<div class="margin-t20 margin-b20">
+  <a 
+    [routerLink]="'\signup'">
+    <img src="../../../assets/add.PNG" style="width:100%">
+  </a>
+</div>
+
+<!-- Animation card -->
+<div class="buy-animation margin-t20 margin-b20">
+  <h1>
+    <span>Get a </span>
+    <div class="message">
+      <div class="word1">Bed</div>
+      <div class="word2">Sofa</div>
+      <div class="word3">Wardrobe</div>
+      <div class="word4">Chair</div>
+    </div>
+  </h1>
+</div>
+
+<!-- Products Grids -->
+<mat-grid-list  class="product-grid" cols="2" rowHeight="2:1" [gutterSize]="'10px'">
+  <a
+    [routerLink]="'/product/all'">
+    <mat-grid-tile class="c1"> </mat-grid-tile>
+  </a>
+  <a
+    [routerLink]="'/product/all'">
+    <mat-grid-tile class="c2"></mat-grid-tile>
+  </a>
+  <a
+    [routerLink]="'/product/all'">
+    <mat-grid-tile class="c3"></mat-grid-tile>
+  </a>
+    <a
+    [routerLink]="'/product/all'">
+    <mat-grid-tile class="c4"></mat-grid-tile>
+    </a>
+</mat-grid-list>
+
+<app-footer></app-footer>

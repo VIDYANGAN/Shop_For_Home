@@ -1,0 +1,34 @@
+
+<mat-card>
+    <h1>Delete Product</h1>
+    <!-- {{category | json}} -->
+    <mat-card-content>
+        
+        <div class="bootstrap-wrapper">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form (ngSubmit)="deleteProductFormSubmit()">
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Product Id</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="product.productId"
+                            autofocus 
+                            type="text" 
+                            name="productId" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        
+                        <div class="container text-center margin-t10">
+                            <button type="submit" mat-raised-button color="primary"> DELETE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,28 @@
+<div class="container bgcol" style="margin-top:20px ;">
+    <button 
+    routerLink="/admin/addUser"
+    mat-raised-button color="primary" style="margin:10px;">Add New User</button>
+    <button 
+    routerLink="/admin/deleteUser"
+    mat-raised-button color="accent" style="margin:10px;">Delete User</button>
+    <button 
+    routerLink="/admin/updateUser"
+    mat-raised-button color="accent" style="margin:10px;"> Update User</button>
+   
+    </div>
+<mat-card>
+    <h1>All Users</h1>
+    <mat-list>
+        
+        <mat-list-item *ngFor="let c of users">
+            <div>UserId: {{c.userId}}</div>
+            <mat-icon mat-list-icon>person</mat-icon>
+            <div mat-line>{{c.userName}}</div>
+            <div mat-line>{{c.email}}</div>
+            <div mat-line><b>{{c.userRole}}</b></div>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+
+    
+</mat-card>

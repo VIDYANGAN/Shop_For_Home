@@ -1,0 +1,91 @@
+<div class="bootstrap-wrapper bgtheme ">
+
+    <div class="container">
+
+        <div class="row ">
+            <div class="col-md-6 offset-md-3">
+              <mat-card class="bgrd2 margin-t20">
+
+                <div class="container text-center divspacer">
+                    <img src="../../../assets/sfhlogo.png" alt="sfhlogo" class="sfhlogo">
+                </div>
+
+                <div class="bgrd1">
+                <h1 class="text-center">Register Here !!</h1>
+
+                  <!-- {{user | json}} -->
+
+                <form (ngSubmit)="formSubmit()" class="text-center" >
+
+                    <!-- userName Field -->
+                    <mat-form-field class="half-width" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input 
+                        [(ngModel)]="user.userName" 
+                        name="userName"
+                        type="text" 
+                        matInput 
+                        placeholder="Enter here" 
+                        maxlength="25" required>
+                        <mat-hint>Username must be unique.</mat-hint>
+                      </mat-form-field>
+
+                    <!-- Password Field -->
+                    
+
+                    <!-- visibility option -->
+                    
+                    <mat-form-field class="half-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input 
+                        [(ngModel)]="user.password" 
+                        name="password"
+                        matInput [type]="hide ? 'password' : 'text'" placeholder="Enter Strong Password" maxlength="20" required>
+                        <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}remove_red_eye</mat-icon>
+                        </a>
+                    </mat-form-field>
+
+                        
+        
+
+                    <!-- Email Field -->
+                    <mat-form-field class="half-width" appearance="outline">
+                        <mat-label>Email Id</mat-label>
+                        <input 
+                        [(ngModel)]="user.email" 
+                        name="email"
+                        type="email" matInput placeholder="demo@example.com" maxlength="30" required>
+                        <mat-hint>Email-Id must be unique.</mat-hint>
+                      </mat-form-field>
+
+                    <!-- Phone -->
+                    <mat-form-field class="half-width margin-b15" appearance="outline">
+                        <mat-label>Phone</mat-label>
+                        <input 
+                        [(ngModel)]="user.phone" 
+                        name="phone" 
+                        matInput 
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        type="number" placeholder="123-456-7890" maxlength="10" required>
+                        <mat-hint>Phone Number must be unique.</mat-hint>
+                      </mat-form-field>
+
+
+                      <div class="container button margin-b15">
+                        <button type="submit" mat-raised-button color="primary"> Register</button>
+                        
+                      <button mat-raised-button color="ascent" style="margin-left: 30px ;"> Reset</button>
+                      </div>
+
+                      <a 
+                      routerLink="/login"
+                      class="linktologin">
+                      Already Registered ? Click here !!</a>
+                </form>
+            </div>
+          </mat-card>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,94 @@
+
+
+<mat-card>
+    <h1>Update Category</h1>
+    <!-- {{category | json}} -->
+    <mat-card-content>
+        
+        <div class="bootstrap-wrapper">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form (ngSubmit)="updateProductFormSubmit()">
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Product Id</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="product.productId"
+                            autofocus 
+                            type="number" 
+                            name="productId" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Product Name</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="product.productName"
+                            autofocus 
+                            type="text" 
+                            name="productName" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Product Price</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="product.productprice"
+                            autofocus 
+                            type="number" 
+                            name="productprice" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Product Stock</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="product.productStock"
+                            autofocus 
+                            type="number" 
+                            name="productStock" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Product Description</mat-label>
+                            <textarea 
+                            required
+                            [(ngModel)]="product.productDescription"
+                            name="categoryDescription" 
+                            matInput 
+                            placeholder="Enter here" 
+                            rows="15">
+                            </textarea>
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Product Image</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="product.productImg"
+                            autofocus 
+                            type="text" 
+                            name="productImg" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+                        
+                        <div class="container text-center margin-t10">
+                            <button type="submit" mat-raised-button color="primary"> UPDATE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </mat-card-content>
+</mat-card>

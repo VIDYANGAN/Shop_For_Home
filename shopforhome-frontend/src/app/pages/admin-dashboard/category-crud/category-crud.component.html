@@ -1,0 +1,29 @@
+<div class="container bgcol" style="margin-top:20px ;">
+    <button
+   routerLink="/admin/addCategory"
+    mat-raised-button color="primary" style="margin:10px;">Add New Category</button>
+    <button 
+    routerLink="/admin/deleteCategory"
+    mat-raised-button color="accent" style="margin:10px;">Delete Category</button>
+    <button 
+    routerLink="/admin/updateCategory"
+    mat-raised-button color="accent" style="margin:10px;"> Update Category</button>
+   
+    </div>
+   
+<mat-card>
+    <h1>All Categories</h1>
+    <mat-list>
+        
+        <mat-list-item *ngFor="let c of categories ">
+            <mat-icon mat-list-icon>folder</mat-icon>
+            <div mat-line>{{c.categoryName}}</div>
+            <div mat-line>{{c.categoryDesc}}</div>
+            <div>Category Id: {{c.categoryId}}</div>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+
+    
+</mat-card>
+

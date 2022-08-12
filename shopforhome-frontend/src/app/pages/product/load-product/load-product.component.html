@@ -1,0 +1,22 @@
+
+<!-- {{products|json}} -->
+<div class="container" >
+    <div class="flex-container" fxLayout="row wrap" fxLayoutGap="30px">
+<mat-card class="example-card margin-t10" *ngFor="let c of products">
+    
+    <img mat-card-image src="../../../../assets/Products/{{c.productImg}}" alt="Photo of a Shiba Inu" style="height:250px">
+    <mat-card-content>
+        <h1><b>{{c.productName}}</b></h1>
+      <h3 style="word-wrap:break-word !important;
+      overflow-wrap: break-word !important; overflow: hidden;">
+        {{c.productDescription}}
+      </h3>
+      <p style="font-size: 20px;">Rs. {{c.productprice}}.00</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="checklogInW()" mat-raised-button color="accent">Add to Wishlist</button>
+      <button (click)="checklogInC()" mat-raised-button color="warn">Add to Cart</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+</div>

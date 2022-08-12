@@ -1,0 +1,34 @@
+
+<mat-card>
+    <h1>Delete User</h1>
+    
+    <mat-card-content>
+        
+        <div class="bootstrap-wrapper">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form (ngSubmit)="deleteUserFormSubmit()">
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>User Id</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="user.userId"
+                            autofocus 
+                            type="number" 
+                            name="userId" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        
+                        <div class="container text-center margin-t10">
+                            <button type="submit" mat-raised-button color="primary"> DELETE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </mat-card-content>
+</mat-card>

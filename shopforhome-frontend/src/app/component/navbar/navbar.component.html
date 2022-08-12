@@ -1,0 +1,53 @@
+
+<!-- Website Logo goes here -->
+<mat-toolbar class="header" id="top">
+  <a 
+  routerLink="/"
+   mat-icon-button class="example-icon" 
+   aria-label="Example icon-button with menu icon">
+    <mat-icon >local_mall</mat-icon>
+  </a>
+
+  <!-- Website Name -->
+  <span class="brand-name"><a href="./" class="brand-name" routerLink="/">ShopForHome App</a></span>
+  <span class="example-spacer"></span>
+
+  
+  <!-- Login Button -->
+  <a 
+  *ngIf="!loginF.isLoggedIn()"
+  [routerLink]="'\login'"
+  mat-icon-button class="example-icon favorite-icon" a
+  ria-label="Example icon-button with heart icon">
+    Login
+  </a>
+  
+  <!-- Sign up button -->
+  <a 
+  *ngIf="!loginF.isLoggedIn()"
+  [routerLink]="'\signup'"
+  mat-icon-button aria-label="Example icon-button with heart icon" 
+  style="margin-right: 10px;margin-left:15px">
+    Register
+  </a>
+
+  <!-- Logout button -->
+  <a 
+  (click)="logout()"
+  *ngIf="loginF.isLoggedIn()"
+  mat-icon-button class="example-icon favorite-icon" a
+  ria-label="Example icon-button with heart icon">
+    Logout
+  </a>
+
+  <!-- username button -->
+  <button 
+  *ngIf="loginF.isLoggedIn()"
+   class="example-icon favorite-icon" 
+   mat-icon-button 
+   style="margin-right: 25px;margin-left:20px"
+   aria-label="Example icon-button with heart icon">
+    {{loginF.getUser().userName}}
+  </button>
+</mat-toolbar>
+

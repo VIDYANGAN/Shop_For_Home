@@ -1,0 +1,29 @@
+<div class="container bgcol " style="margin-top:20px ;">
+    <button 
+    routerLink="/admin/addProduct"
+    mat-raised-button color="primary" style="margin:10px;">Add New Product</button>
+    <button
+    routerLink="/admin/deleteProduct" 
+    mat-raised-button color="accent" style="margin:10px;">Delete Product</button>
+    <button 
+    routerLink="/admin/updateProduct" 
+    mat-raised-button color="accent" style="margin:10px;"> Update Category</button>
+   
+    </div>
+
+<mat-card>
+    <h1>All Products</h1>
+    <mat-list>
+        
+        <mat-list-item *ngFor="let c of products">
+            <mat-icon mat-list-icon>folder</mat-icon>
+            <div mat-line><b>{{c.productName}}</b></div>
+            <div >{{c.productDescription}}</div>
+            <div mat-line>Product Id: {{c.productId}}</div>
+            <div mat-line>Stock: {{c.productStock}}</div>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+
+    
+</mat-card>

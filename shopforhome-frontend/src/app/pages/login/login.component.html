@@ -1,0 +1,63 @@
+<div class="bootstrap-wrapper bgtheme">
+
+    <div class="container">
+
+        <div class="row ">
+            <div class="col-md-6 offset-md-3">
+                <mat-card class="bgrd2 margin-t50">
+
+                <div class="container text-center divspacer">
+                    <img src="../../../assets/sfhlogo.png" alt="sfhlogo" class="sfhlogo">
+                </div>
+
+                <div class="bgrd1">
+                <h1 class="text-center">Login</h1>
+
+                <!-- {{loginData|json}} -->
+
+                <form 
+                (ngSubmit)="loginFormSubmit()" 
+                class="text-center">
+
+                    <!-- userName Field -->
+                    <mat-form-field class="half-width" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <!-- <input [(ngModel)]="user.userName" type="text" matInput placeholder="Enter here" required> -->
+                        <input  
+                        [(ngModel)]="loginData.userName"
+                        name="userName"
+                        type="text" matInput placeholder="Enter here" maxlength="25" required>
+                        <mat-hint>Valid Username</mat-hint>
+                    </mat-form-field>
+
+                    <!-- Password Field -->
+                    <!-- visibility option -->
+                    
+                    <mat-form-field class="half-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input  
+                        [(ngModel)]="loginData.password"
+                        name="password"
+                        matInput [type]="hide ? 'password' : 'text'" placeholder="Enter Strong Password" maxlength="20" required="">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}remove_red_eye</mat-icon>
+                        </button>
+                    </mat-form-field>
+
+                    <div class="container margin-b15">
+                        <button mat-raised-button color="primary" type="submit">Login</button>
+                        <button  mat-raised-button color="ascent" style="margin-left: 30px ;"> Reset</button>
+                    </div>
+
+                    <a 
+                      routerLink="/signup"
+                      class="linktosignup">
+                      Not yet Registered ? Click here !!</a>
+                </form>
+                
+            </div>
+        </mat-card>
+            </div>  
+        </div>
+    </div>
+</div>

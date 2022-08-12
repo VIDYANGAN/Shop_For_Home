@@ -1,0 +1,74 @@
+<!-- <p>adduser works!</p> -->
+<!-- {{user|json}} -->
+
+<mat-card>
+    <h1>Add New User</h1>
+    <!-- {{category | json}} -->
+    <mat-card-content>
+        
+        <div class="bootstrap-wrapper">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form (ngSubmit)="addUserFormSubmit()">
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="user.userName"
+                            autofocus 
+                            type="text" 
+                            name="userName" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="user.password"
+                            autofocus 
+                            type="text" 
+                            name="userpassword" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="user.email"
+                            autofocus 
+                            type="text" 
+                            name="email" 
+                            matInput 
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Phone Number</mat-label>
+                            <input 
+                            required
+                            [(ngModel)]="user.phone"
+                            autofocus 
+                            type="text" 
+                            name="phone" 
+                            matInput 
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            placeholder="Enter here" maxlength="10">
+                            
+                        </mat-form-field>
+
+                        
+                        <div class="container text-center margin-t10">
+                            <button type="submit" mat-raised-button color="primary"> ADD</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </mat-card-content>
+</mat-card>

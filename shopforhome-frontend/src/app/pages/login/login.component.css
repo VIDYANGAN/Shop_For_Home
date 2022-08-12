@@ -1,0 +1,51 @@
+.bgtheme{
+    background-color: #D1E8E2;
+}
+
+div.bootstrap-wrapper{
+    /* background:url("../../../assets/images.jfif"); */
+    height: 650px;
+    /* background-repeat: no-repeat; */
+    background-size:cover;
+}
+
+div.row{
+    /* margin-top: 30px; */
+    padding-top: 20px;
+}
+
+
+.sfhlogo{
+    width: 80px;
+    height: 80px;
+}
+
+.half-width{
+    width: 70%;
+}
+
+.divspacer{
+    margin-bottom: 20px;
+}
+
+/* .bgrd1{
+    background:url("../../../assets/images.jfif");
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding: 20px;
+} */
+
+.bgrd2{
+    background:url("../../../assets/images.jfif");
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding: 20px;
+} 
+
+.linktosignup{
+    color: black;
+}
+
+.linktosignup:hover{
+    color: white;
+}
